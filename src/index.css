@@ -257,7 +257,7 @@ header nav ul li a:hover {
       position: absolute;
       top: 100%;
       width: 250px;
-      border-radius: 12px;
+      border-radius: 5px;
       background-color: #202020;
       flex-direction: column;
       gap: 0;
@@ -279,7 +279,24 @@ header nav ul li a:hover {
       padding: 10px;
       width: 100%;
   }
-  
+
+
+header nav ul {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 260px;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+  flex-direction: column;
+  z-index: 99;
+  padding: 1rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
 
 
 header nav ul li a {
