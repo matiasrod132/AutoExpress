@@ -281,39 +281,7 @@ header nav ul li a:hover {
   }
 
 
-header nav ul {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  width: 260px;
-  background-color: #1e1e1e;
-  border-radius: 12px;
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
-  flex-direction: column;
-  z-index: 99;
-  padding: 1rem 0;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  transition: all 0.3s ease;
-}
-
-
-header nav ul li a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 500;
-  display: block;
-  width: 100%;
-  transition: color 0.3s ease;
-}
-
-
-
-
-
-
-
+  
   .menu-toggle {
       display: flex;
   }
