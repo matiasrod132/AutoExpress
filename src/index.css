@@ -263,7 +263,7 @@ header nav ul li a:hover {
       background-color: #202020;
       gap: 0;
       z-index: 2;
-      padding: auto;
+      padding:  1rem;
       transform: translateY(0px);
       opacity: 0;
       visibility: hidden;
