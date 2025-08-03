@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 const Header: React.FC = () => {
   const [language, setLanguage] = useState<string>('en');
   const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // NUEVO
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const menuRef = useRef<HTMLUListElement>(null);
+  const toggleRef = useRef<HTMLDivElement>(null);
 
   const translatePage = (selectedLanguage: string) => {
     setLanguage(selectedLanguage);
@@ -43,11 +46,21 @@ const Header: React.FC = () => {
       if (optionsContainer && selectBox && !optionsContainer.contains(event.target as Node) && !selectBox.contains(event.target as Node)) {
         setIsLanguageMenuOpen(false);
       }
+
+      if (
+        isMobileMenuOpen &&
+        menuRef.current &&
+        toggleRef.current &&
+        !menuRef.current.contains(event.target as Node) &&
+        !toggleRef.current.contains(event.target as Node)
+      ) {
+        setIsMobileMenuOpen(false);
+      }
     };
 
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+  }, [isMobileMenuOpen]);
 
   const handleLanguageChange = (e: React.MouseEvent<HTMLDivElement>) => {
     const selectedLanguage = (e.currentTarget as HTMLElement).getAttribute('data-lang');
@@ -104,7 +117,7 @@ const Header: React.FC = () => {
           </div>
 
           {/* Menú hamburguesa */}
-          <div className="menu-toggle" onClick={toggleMobileMenu}>
+          <div className="menu-toggle" onClick={toggleMobileMenu} ref={toggleRef}>
             <span className="bar"></span>
             <span className="bar"></span>
             <span className="bar"></span>
@@ -112,7 +125,7 @@ const Header: React.FC = () => {
 
           {/* Menú móvil desplegable */}
           {isMobileMenuOpen && (
-            <ul className={`nav-links mobile-only ${isMobileMenuOpen ? 'active' : ''}`}>
+            <ul className={`nav-links mobile-only active`} ref={menuRef}>
               <li><a href="#inicio" onClick={closeMobileMenu}>Inicio</a></li>
               <li><a href="#servicios" onClick={closeMobileMenu}>Servicios</a></li>
               <li><a href="#contacto" onClick={closeMobileMenu}>Contacto</a></li>
