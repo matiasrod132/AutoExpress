@@ -74,7 +74,7 @@ const Header: React.FC = () => {
           <img src="./imagenes/generales/logo.webp" alt="Logo" width="100" height="103" />
           <p>Auto Express</p>
         </div>
-        <nav>
+        <nav className='menu-idioma'>
           {/* Enlaces en modo escritorio */}
           <ul className="nav-links desktop-only">
             <li><a href="#inicio" className="translatable" data-es="Inicio" data-en="Home">Inicio</a></li>
