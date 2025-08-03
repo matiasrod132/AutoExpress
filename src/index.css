@@ -245,7 +245,7 @@ header nav ul li a:hover {
 }
 
 /* Media Queries */
-@media (max-width: 1012px) {
+@media (max-width: 768px) {
   header nav {
       display: flex;
       align-items: center;
