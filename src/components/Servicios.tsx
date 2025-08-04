@@ -2,11 +2,12 @@ import React from 'react';
 import { ScrollReveal } from '../ScrollReveal';
 
 const Servicios: React.FC = () => {
-  const { ref, isVisible } = ScrollReveal<HTMLDivElement>();
+  const { ref: refDerecha } = ScrollReveal<HTMLDivElement>('translateX(800px)');
+  const { ref: refIzquierda } = ScrollReveal<HTMLDivElement>('translateX(-800px)');
 
   return (
     <section id="servicios">
-      <div ref={ref} className={`scroll-reveal ${isVisible ? 'visible' : ''}`}>
+      <div ref={refDerecha}>
         <h2 className="titulo translatable" data-es="NUESTROS SERVICIOS" data-en="OUR SERVICES">NUESTROS SERVICIOS</h2>
         <h2 className="header-titulo"></h2>
         <h3
@@ -16,7 +17,8 @@ const Servicios: React.FC = () => {
         >
           Contamos con gran variedad de servicios que podrían ayudarte con el mejoramiento y desempeño de tú auto
         </h3>
-        <div className="contenedor">
+        </div>
+        <div ref={refIzquierda} className="contenedor">
           <div className="caja">
             <svg className="icono" xmlns="https://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path>
@@ -55,7 +57,7 @@ const Servicios: React.FC = () => {
               <p className="texto translatable" data-es="Nuestros tecnicos estan capacitados en la ultima tecnologia de vehiculos hibrido y electrico, garantizando un servicio especializado y de alta calidad." data-en="Our technicians are trained in the latest hybrid and electric vehicle technology, ensuring specialized and high-quality service.">Nuestros tecnicos estan capacitados en la ultima tecnologia de vehiculos hibrido y electircos, garantizando un servicio especializado y de alta calidad.</p>
           </div>
         </div>
-      </div>
+      
     </section>
   );
 };

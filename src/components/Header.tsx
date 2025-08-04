@@ -38,7 +38,7 @@ const Header: React.FC = () => {
     const savedLang = localStorage.getItem('selectedLanguage');
     const userLang = navigator.language;
     const defaultLang = savedLang || (userLang.startsWith('en') ? 'en' : (userLang.startsWith('fr') ? 'fr' : 'es'));
-    translatePage(defaultLang);
+    translatePage(defaultLang); 
 
     const handleClickOutside = (event: MouseEvent) => {
       const optionsContainer = document.querySelector('.options-container');
@@ -61,6 +61,19 @@ const Header: React.FC = () => {
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [isMobileMenuOpen]);
+
+  useEffect(() => {
+  if (isMobileMenuOpen) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
+
+  return () => {
+    document.body.style.overflow = '';
+  };
+  }, [isMobileMenuOpen]);
+
 
   const handleLanguageChange = (e: React.MouseEvent<HTMLDivElement>) => {
     const selectedLanguage = (e.currentTarget as HTMLElement).getAttribute('data-lang');

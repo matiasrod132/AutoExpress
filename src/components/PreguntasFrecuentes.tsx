@@ -9,7 +9,7 @@ interface Question {
 }
 
 const FAQ: React.FC = () => {
-  const { ref } = ScrollReveal<HTMLDivElement>('translateX(-800px)');
+  const { ref } = ScrollReveal<HTMLDivElement>('translateX(800px)');
   
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const questions: Question[] = [

@@ -3,11 +3,11 @@ import React from 'react';
 import { ScrollReveal } from '../ScrollReveal';
 
 const PorqueNosotros: React.FC = () => {
-  const { ref, isVisible } = ScrollReveal<HTMLDivElement>();
+  const { ref } = ScrollReveal<HTMLDivElement>('translateX(-800px)');
 
   return (
     <section id="porque-nosotros">
-      <div ref={ref} className={`scroll-reveal ${isVisible ? 'visible' : ''}`}>
+      <div ref={ref}>
         <div className="card-img"></div>
         <div className="card-content"></div>
         <h2 className="titulo translatable" data-es="¿POR QUÉ NOSOTROS?" data-en="WHY US">¿POR QUÉ NOSOTROS?</h2>

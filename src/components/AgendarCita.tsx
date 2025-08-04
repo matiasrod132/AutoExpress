@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ScrollReveal } from '../ScrollReveal';
 
 const AppointmentScheduler: React.FC = () => {
-  const { ref, isVisible } = ScrollReveal<HTMLDivElement>();
+  const { ref } = ScrollReveal<HTMLDivElement>('translateX(800px)');
 
   const [selectedBrand, setSelectedBrand] = useState('audi');
   const [selectedVehicleType, setSelectedVehicleType] = useState('sedan');
@@ -102,7 +102,7 @@ const AppointmentScheduler: React.FC = () => {
 
   return (
     <section id="agenda-cita">
-      <div ref={ref} className={`scroll-reveal ${isVisible ? 'visible' : ''}`}>
+      <div ref={ref}>
         <div className="cita">
           <h2 className="titulo translatable" data-es="AGENDA TU CITA" data-en="SCHEDULE YOUR APPOINTMENT">AGENDA TU CITA</h2>
           <div className="header-titulo"></div>

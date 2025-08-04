@@ -1,11 +1,3 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #151515;
-  color: #fff;
-  box-sizing: border-box;
-}
 /* General Styles */
 body {
   font-family: Arial, sans-serif;
@@ -14,6 +6,7 @@ body {
   background-color: #151515;
   color: #fff;
   box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 /* Header */
@@ -682,7 +675,7 @@ section h3.descripcion{
   margin: 10px;
   padding: 25px;
   text-align: left;
-  box-shadow: 0px 4px 6px 0px #d47d42, 0 5px 4px -2px #ff660000;
+  box-shadow: 0px 3px 60px -40px #d47d42, 0 5px 4px -2px #ff660000;
   transition: background-color 0.3s ease-in-out, transform 0.8s ease-in-out;
 }
 #servicios .contenedor .caja:hover {
@@ -1185,9 +1178,9 @@ section h3.descripcion{
 .custom-select .arrow-down {
   width: 0;
   height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid #333;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 12px solid #333;
   margin-left: auto;
   margin-right: 10px;
   transition: transform 0.3s ease;
@@ -1400,12 +1393,14 @@ footer .container {
 }
 footer .footer-section {
   flex: 1;
+  text-align: center;
   min-width: 250px;
   margin: 10px;
 }
 .footer-content {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .footer-content-title {
   margin: 0px 5px 0px 0px;
@@ -1447,7 +1442,6 @@ footer .footer-bottom p {
 }
 @media (max-width: 1024px) {
   footer .container {
-      flex-direction: column;
       align-items: center;
   }
   footer .footer-section {
@@ -1456,6 +1450,7 @@ footer .footer-bottom p {
 }
 .icon-list {
   display: flex;
+  justify-content: center;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -1463,25 +1458,33 @@ footer .footer-bottom p {
 .icon-item {
   display: flex;
   margin: 8px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   padding: 0;
+  transition: transform 0.3s ease-in-out;
 }
 .icon-item:hover {
   transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
 }
 .icon-link svg {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   margin: 5px;
-  transition: transform 0.3s ease;
   fill: #fff;
 }
-.whatsapp .icon-link svg{
-  width: 30px;
-}
 .instagram {
-  background-color: #f00075;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #feda75 0%,
+    #fa7e1e 25%,
+    #d62976 50%,
+    #962fbf 75%,
+    #4f5bd5 100%
+  );
 }
-.whatsapp {
-  background-color: #25D366;
+.no-scroll {
+  overflow: hidden;
+  touch-action: none; /* Para evitar scroll en móviles */
 }

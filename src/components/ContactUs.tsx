@@ -2,7 +2,7 @@ import React from 'react';
 import { ScrollReveal } from '../ScrollReveal';
 
 const ContactUs: React.FC = () => {
-  const { ref } = ScrollReveal<HTMLDivElement>('translateX(-150px)');
+  const { ref } = ScrollReveal<HTMLDivElement>('translateX(800px)');
 
   return (
     <section id="contactus">
