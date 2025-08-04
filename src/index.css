@@ -696,7 +696,7 @@ section h3.descripcion{
 }
 @media (max-width: 1024px) {
   #servicios .contenedor .caja{
-    width: 25%;
+    width: 39%;
     padding: 10px;
   }
   #servicios .caja .titulo{
