@@ -700,12 +700,12 @@ section h3.descripcion{
     padding: 10px;
   }
   #servicios .caja .titulo{
-    font-size: 12px;
-    line-height: 12px;
+    font-size: 16px;
+    line-height: 16px;
   }
   #servicios .caja .texto{
-    font-size: 8px;
-    line-height: 10px;
+    font-size: 11px;
+    line-height: 13px;
   }
   #servicios .caja .icono{
     margin: 0px 0px 0px;
