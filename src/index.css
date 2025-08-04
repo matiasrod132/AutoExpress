@@ -412,6 +412,11 @@ section h3.descripcion{
 .header-titulo{
   text-align: center;
 }
+@media (max-width: 1012px) {
+  section {
+    padding: 50px 0px 50px 0px;
+  }
+}
 
 /* CARRUSEL */
 #slide{
@@ -619,12 +624,18 @@ section h3.descripcion{
       font-size: 16px;
       padding: 0;
   }
+  #contactus {
+    padding: 50px 0px 50px 0px;
+  }
+  .contactus {
+    padding: 0px;
+  }
   .contactus .boton{
-      padding: 15px 12px;
-      margin: 5%;
+    padding: 15px 12px;
+    margin: 5%;
   }
   .contactus h2{
-      font-size: 22px;
+    font-size: 22px;
   }
 }
 
@@ -644,7 +655,7 @@ section h3.descripcion{
 }
 @media (max-width: 1024px) {
   #porque-nosotros{
-      padding: 100px 5% 100px 5%;
+    padding: 50px 5% 50px 5%;
   }    
 }
 
