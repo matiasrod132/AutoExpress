@@ -30,7 +30,10 @@ const testimonialsData: Testimonial[] = [
 ];
 
 const Testimonials: React.FC = () => {
-  const { ref } = ScrollReveal<HTMLDivElement>('translateX(-800px)');
+  const { ref } = ScrollReveal<HTMLDivElement>(
+    'translateX(80%)',
+    'translateX(50%)'
+  );
 
   const [currentSlide, setCurrentSlide] = useState(1);
   const [isDragging, setIsDragging] = useState(false);
@@ -76,7 +79,7 @@ const Testimonials: React.FC = () => {
 
   return (
     <section id="testimonios">
-      <div ref={ref}>
+      <div ref={ref} style={{ overflow: "hidden" }}>
         <h2 className="titulo translatable" data-es="TESTIMONIOS" data-en="TESTIMONIALS">TESTIMONIOS</h2>
         <div className="header-titulo"></div>
         <div className="carrusel" onMouseDown={startDragging} onMouseMove={whileDragging} onMouseUp={endDragging}>

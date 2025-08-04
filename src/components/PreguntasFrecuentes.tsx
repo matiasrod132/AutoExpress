@@ -9,7 +9,10 @@ interface Question {
 }
 
 const FAQ: React.FC = () => {
-  const { ref } = ScrollReveal<HTMLDivElement>('translateX(800px)');
+  const { ref } = ScrollReveal<HTMLDivElement>(
+    'translateX(80%)',
+    'translateX(50%)'
+  );
   
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const questions: Question[] = [
@@ -45,7 +48,7 @@ const FAQ: React.FC = () => {
 
   return (
     <section className="preguntas-frecuentes">
-      <div ref={ref}>
+      <div ref={ref} style={{ overflow: "hidden" }}>
         <h2 className="titulo translatable" data-es="PREGUNTAS FRECUENTES" data-en="FREQUENT QUESTIONS">PREGUNTAS FRECUENTES</h2>
         <div className="header-titulo"></div>
         <div className="faq">

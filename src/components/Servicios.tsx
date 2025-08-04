@@ -2,12 +2,18 @@ import React from 'react';
 import { ScrollReveal } from '../ScrollReveal';
 
 const Servicios: React.FC = () => {
-  const { ref: refDerecha } = ScrollReveal<HTMLDivElement>('translateX(800px)');
-  const { ref: refIzquierda } = ScrollReveal<HTMLDivElement>('translateX(-800px)');
+    const { ref: refDerecha } = ScrollReveal<HTMLDivElement>(
+      'translateX(80%)',
+      'translateX(50%)'
+    );
+  const { ref: refIzquierda } = ScrollReveal<HTMLDivElement>(
+      'translateX(-80%)',
+      'translateX(-50%)'
+    );
 
   return (
     <section id="servicios">
-      <div ref={refDerecha}>
+      <div ref={refDerecha} style={{ overflow: "hidden" }}>
         <h2 className="titulo translatable" data-es="NUESTROS SERVICIOS" data-en="OUR SERVICES">NUESTROS SERVICIOS</h2>
         <h2 className="header-titulo"></h2>
         <h3

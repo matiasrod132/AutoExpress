@@ -6,7 +6,8 @@ body {
   background-color: #151515;
   color: #fff;
   box-sizing: border-box;
-    overflow-x: hidden;
+  display: block;
+  overflow-x: hidden;
 }
 
 /* Header */
@@ -25,15 +26,10 @@ header .contenedor {
   align-items: center;
   width: 90%;
   max-width: 1200px;
-  margin: auto;
-  padding: 0;
-
-
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -575,6 +571,7 @@ section h3.descripcion{
 /* CANTACTANOS */
 #contactus {
   padding: 0px;
+  overflow: hidden;
 }
 .contactus{
   display: flex;
@@ -643,6 +640,7 @@ section h3.descripcion{
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  overflow: hidden;
 }
 @media (max-width: 1024px) {
   #porque-nosotros{
@@ -655,6 +653,7 @@ section h3.descripcion{
   background-image: url(/public/imagenes/generales/fondo-2.webp);
   background-position: center;
   background-size: cover;
+  overflow: hidden;
 }
 #servicios .contenedor{
   width: 100%;
@@ -717,6 +716,7 @@ section h3.descripcion{
   background-position: center;
   background-size: cover;
   background-position-y: center;
+  overflow: hidden;
 }
 #testimonios .carrusel {
   position: relative;
@@ -871,6 +871,7 @@ section h3.descripcion{
   background-position: center;
   background-size: cover;
   background-color: #202020;
+  overflow: hidden;
 }
 #contacto .caja{
   display: flex;
@@ -1047,6 +1048,7 @@ section h3.descripcion{
   background-image: url(/public/imagenes/generales/fondo-2.webp);
   background-position: center;
   background-size: cover;
+  overflow: hidden;
 }
 .cita {
   width: 100%;

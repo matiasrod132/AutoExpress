@@ -3,8 +3,8 @@ import { ScrollReveal } from '../ScrollReveal';
 import emailjs from '@emailjs/browser';
 
 const Contacto: React.FC = () => {
-  const { ref: refDerecha } = ScrollReveal<HTMLDivElement>('translateX(700px)');
-  const { ref: refIzquierda } = ScrollReveal<HTMLDivElement>('translateX(-700px)');
+  const { ref: refDerecha } = ScrollReveal<HTMLDivElement>('translateX(100%)');
+  const { ref: refIzquierda } = ScrollReveal<HTMLDivElement>('translateX(-100%)');
 
   const sendMail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -35,7 +35,7 @@ const Contacto: React.FC = () => {
   return (
     <section id="contacto">
       <div className="caja">
-        <div ref={refIzquierda} className="informacion">
+        <div ref={refIzquierda} style={{ overflow: "hidden" }} className="informacion">
           <div className="info-header">
             <h2 className="titulo translatable" data-es="CONTACTANOS" data-en="CONTACT US">CONTACTANOS</h2>
             <div className="header-titulo"></div>
