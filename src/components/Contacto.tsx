@@ -35,7 +35,7 @@ const Contacto: React.FC = () => {
   return (
     <section id="contacto">
       <div className="caja">
-        <div ref={refIzquierda} style={{ overflow: "hidden" }} className="informacion">
+        <div ref={refIzquierda} className="informacion">
           <div className="info-header">
             <h2 className="titulo translatable" data-es="CONTACTANOS" data-en="CONTACT US">CONTACTANOS</h2>
             <div className="header-titulo"></div>

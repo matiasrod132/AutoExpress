@@ -13,7 +13,7 @@ const Servicios: React.FC = () => {
 
   return (
     <section id="servicios">
-      <div ref={refDerecha} style={{ overflow: "hidden" }}>
+      <div ref={refDerecha}>
         <h2 className="titulo translatable" data-es="NUESTROS SERVICIOS" data-en="OUR SERVICES">NUESTROS SERVICIOS</h2>
         <h2 className="header-titulo"></h2>
         <h3

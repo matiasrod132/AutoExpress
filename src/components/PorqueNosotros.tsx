@@ -4,13 +4,13 @@ import { ScrollReveal } from '../ScrollReveal';
 
 const PorqueNosotros: React.FC = () => {
   const { ref } = ScrollReveal<HTMLDivElement>(
-    'translateX(80%)',
-    'translateX(50%)'
+    'translateX(-80%)',
+    'translateX(-50%)'
   );
 
   return (
     <section id="porque-nosotros">
-      <div ref={ref} style={{ overflow: "hidden" }}>
+      <div ref={ref}>
         <div className="card-img"></div>
         <div className="card-content"></div>
         <h2 className="titulo translatable" data-es="¿POR QUÉ NOSOTROS?" data-en="WHY US">¿POR QUÉ NOSOTROS?</h2>

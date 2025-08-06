@@ -79,7 +79,7 @@ const Testimonials: React.FC = () => {
 
   return (
     <section id="testimonios">
-      <div ref={ref} style={{ overflow: "hidden" }}>
+      <div ref={ref}>
         <h2 className="titulo translatable" data-es="TESTIMONIOS" data-en="TESTIMONIALS">TESTIMONIOS</h2>
         <div className="header-titulo"></div>
         <div className="carrusel" onMouseDown={startDragging} onMouseMove={whileDragging} onMouseUp={endDragging}>

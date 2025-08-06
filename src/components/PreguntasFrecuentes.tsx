@@ -10,8 +10,8 @@ interface Question {
 
 const FAQ: React.FC = () => {
   const { ref } = ScrollReveal<HTMLDivElement>(
-    'translateX(80%)',
-    'translateX(50%)'
+    'translateX(-80%)',
+    'translateX(-50%)'
   );
   
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -47,22 +47,24 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <section className="preguntas-frecuentes">
-      <div ref={ref} style={{ overflow: "hidden" }}>
-        <h2 className="titulo translatable" data-es="PREGUNTAS FRECUENTES" data-en="FREQUENT QUESTIONS">PREGUNTAS FRECUENTES</h2>
-        <div className="header-titulo"></div>
-        <div className="faq">
-          {questions.map((item, index) => (
-            <div className="caja" key={index}>
-              <div className="pregunta-wrapper" onClick={() => toggleQuestion(index)}>
-                <div className="pregunta translatable" data-es={item.question} data-en={item.question_en}>{item.question}</div>
-                <span className={`flecha ${openIndex === index ? 'open' : ''}`}></span>
+    <section id="preguntas-frecuentes">
+      <div ref={ref}>
+        <div className='preguntas-frecuentes'>
+          <h2 className="titulo translatable" data-es="PREGUNTAS FRECUENTES" data-en="FREQUENT QUESTIONS">PREGUNTAS FRECUENTES</h2>
+          <div className="header-titulo"></div>
+          <div className="faq">
+            {questions.map((item, index) => (
+              <div className="caja" key={index}>
+                <div className="pregunta-wrapper" onClick={() => toggleQuestion(index)}>
+                  <div className="pregunta translatable" data-es={item.question} data-en={item.question_en}>{item.question}</div>
+                  <span className={`flecha ${openIndex === index ? 'open' : ''}`}></span>
+                </div>
+                <div className={`respuesta-wrapper ${openIndex === index ? 'open' : ''}`}>
+                  <div className="respuesta translatable" data-es={item.answer} data-en={item.answer_en}>{item.answer}</div>
+                </div>
               </div>
-              <div className={`respuesta-wrapper ${openIndex === index ? 'open' : ''}`}>
-                <div className="respuesta translatable" data-es={item.answer} data-en={item.answer_en}>{item.answer}</div>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

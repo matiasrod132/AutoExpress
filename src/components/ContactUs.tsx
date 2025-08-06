@@ -9,7 +9,7 @@ const ContactUs: React.FC = () => {
 
   return (
     <section id="contactus">
-      <div ref={ref} style={{ overflow: "hidden" }}>
+      <div ref={ref}>
         <div className='contactus'>
           <h2 className="translatable" data-es="CONTACTANOS ¡AHORA!" data-en="CONTACT US NOW!">CONTACTANOS ¡AHORA!</h2>
           <a href="#contacto" className="boton translatable" type="button" data-es="CONTACTANOS AQUÍ" data-en="CONTACT US HERE">CONTACTANOS AQUÍ</a>

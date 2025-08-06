@@ -105,7 +105,7 @@ const AppointmentScheduler: React.FC = () => {
 
   return (
     <section id="agenda-cita">
-      <div ref={ref} style={{ overflow: "hidden" }}>
+      <div ref={ref}>
         <div className="cita">
           <h2 className="titulo translatable" data-es="AGENDA TU CITA" data-en="SCHEDULE YOUR APPOINTMENT">AGENDA TU CITA</h2>
           <div className="header-titulo"></div>
